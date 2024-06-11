@@ -1,0 +1,55 @@
+dataset:
+  folder: C:\Users\FV9IFG0\Desktop\Optimizer_capacity\ISP\raw 
+
+isp:
+
+  config_file: C:\Users\F80lab1\Desktop\CDP_IM\Optimizer_CDP 1\Optimizer_CDP\ISP\configs\DFC.yaml
+
+optimizer: 
+  optimizer_type: cma #cma, bayesian or inference
+  normalization: True
+  bounds:
+    gac:
+      gain: [ 10, 4096 ]
+      gamma: [ 0.2, 3. ]
+
+    bcc:
+      brightness_offset: [ 0, 500 ]
+      contrast_gain: [ 0, 1000 ]
+
+    ceh:
+      tiles: [ [ 2, 100 ], [ 2, 150 ] ]
+      clip_limit: [ 0.02, 100.0 ]
+
+    hsc:
+      hue_offset: [ 0, 360 ]
+      saturation_gain: [ 0, 1000 ]
+
+    eeh:
+      edge_gain: [ 0, 512 ]
+      flat_threshold: [ 0, 50 ]
+      edge_threshold: [ 0, 50 ]
+      delta_threshold: [ 0, 256 ]
+
+  init:
+    gac:
+      gain: 256
+      gamma: 0.45
+
+    bcc:
+      brightness_offset: 0
+      contrast_gain: 300
+
+    ceh:
+      tiles: [ 2, 6 ]
+      clip_limit: 0.02
+
+    hsc:
+      hue_offset: 0
+      saturation_gain: 256
+
+    eeh:
+      edge_gain: 256 
+      flat_threshold: 2
+      edge_threshold: 10
+      delta_threshold: 64
